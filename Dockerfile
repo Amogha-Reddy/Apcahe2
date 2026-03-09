@@ -1,5 +1,5 @@
 FROM ubuntu:latest
 RUN apt update && apt install apache2 -y
 COPY index.html /var/www/html/
-CMD ["apachectl","-D","FOREGROUND"]
+CMD ["/usr/sbin/apachectl","-D","FOREGROUND"]
 EXPOSE 80
